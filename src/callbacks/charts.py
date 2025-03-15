@@ -141,7 +141,7 @@ def create_state_time(data, top_state):
     select_state = alt.selection_point(
         fields=['state']
         )
-    top10 = alt.Chart(data).mark_bar(color='teal').encode(
+    top10 = alt.Chart(data).mark_bar(color='teal', cursor="pointer").encode(
             x=alt.X('count()', title='Number of Killings'),
             y=alt.Y('state', sort='-x', title=' '),
             tooltip = 'count()',
